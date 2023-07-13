@@ -1,16 +1,18 @@
 import { Image, SafeAreaView, StyleSheet, Text, View } from 'react-native';
-import Button from './Button';
-
-export default function AboutScreen() {
+import Button from '../../components/Button';
+export default function AboutScreen({ navigation }) {
+    const handleNavigation = () => {
+        navigation.navigate('Login')
+    }
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.imageContainer}>
-                <Image source={require('./../assets/images/about-page-image.png')} style={styles.imageStyle} />
+                <Image source={require('./../../assets/images/about-page-image.png')} style={styles.imageStyle} />
             </View>
             <View style={styles.textContainer}>
                 <Text style={styles.headingText}>Learn Code From Your Home</Text>
                 <Text style={styles.textContent}>Learning is an essential part of everyone’s life, whether it is for achieving a job or for knowledge’s sake. Online environment is changing constantly and it is a great opportunity for learning.</Text>
-                <Button />
+                <Button handleClick={handleNavigation} />
             </View>
         </SafeAreaView>
     );
