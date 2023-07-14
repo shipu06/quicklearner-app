@@ -1,10 +1,11 @@
-import { StyleSheet, View, Text, Image } from 'react-native';
-export default function Button() {
+import { StyleSheet, View, Text, Image, Pressable } from 'react-native';
+export default function Button({ handleClick }) {
+
     return (
-        <View style={[styles.buttonWrapper, styles.buttonShadow]}>
+        <Pressable style={[styles.buttonWrapper, styles.buttonShadow]} onPress={handleClick}>
             <Text style={styles.buttonText}>Next</Text>
             <View style={styles.vectorContainer}><Image source={require('./../assets/images/Vector.png')} style={styles.vectorImage} /></View>
-        </View>
+        </Pressable>
     )
 }
 
