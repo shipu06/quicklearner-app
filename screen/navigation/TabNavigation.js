@@ -13,8 +13,8 @@ export default function TabNavigation() {
         <Tab.Navigator screenOptions={{
             tabBarActiveTintColor: GlobalStyle.primaryColor,
             tabBarStyle: {
-                backgroundColor: '#0000ff',
-                height: 40,
+                height: 60,
+                paddingBottom: 10
             },
         }}
 
