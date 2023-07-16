@@ -6,13 +6,13 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import TabNavigation from './screen/navigation/TabNavigation';
 import DrawerNavigation from './screen/navigation/DrawerNavigation';
+
 const Stack = createNativeStackNavigator();
 
 
 
 export default function App() {
   return (
-
     <NavigationContainer>
       <Stack.Navigator initialRouteName="About">
         <Stack.Screen name="About" options={{ headerShown: false }} component={AboutScreen} />
@@ -22,7 +22,6 @@ export default function App() {
       </Stack.Navigator>
       <StatusBar style="light" backgroundColor='black' />
     </NavigationContainer>
-
   );
 }
 
