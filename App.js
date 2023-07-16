@@ -5,6 +5,7 @@ import AboutScreen from './screen/intro/AboutScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import TabNavigation from './screen/navigation/TabNavigation';
+import DrawerNavigation from './screen/navigation/DrawerNavigation';
 const Stack = createNativeStackNavigator();
 
 
@@ -17,6 +18,7 @@ export default function App() {
         <Stack.Screen name="About" options={{ headerShown: false }} component={AboutScreen} />
         <Stack.Screen name="Login" options={{ headerShown: false }} component={Login} />
         <Stack.Screen name="MainScreen" options={{ headerShown: false }} component={TabNavigation} />
+        <Stack.Screen name="DrawerNavigation" options={{ headerShown: false }} component={DrawerNavigation} />
       </Stack.Navigator>
       <StatusBar style="light" backgroundColor='black' />
     </NavigationContainer>

@@ -18,7 +18,7 @@ export default function Login({ navigation }) {
     const maximumCodeLength = 4;
 
     const handleNavigation = () => {
-        navigation.navigate('MainScreen')
+        navigation.navigate('DrawerNavigation')
     }
     const handleTabChange = (value) => {
         index !== value && setIndex(value);

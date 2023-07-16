@@ -24,14 +24,15 @@ export default function Home() {
                     />
                 </TouchableOpacity>
             </View>
-            <View>
-                <Text>Welcome back Sharmii !</Text>
+            <View style={styles.contentContainer}>
+                <Text style={styles.greetText}>Welcome back </Text>
+                <Text style={styles.greetText}>Sharmii !</Text>
                 <SearchBar
                     placeholder="Search for new Knowledge!"
                     onChangeText={handleSearch}
                     value={search}
                     clearIcon={false}
-                    containerStyle={{ backgroundColor: GlobalStyle.screenView.backgroundColor }}
+                    containerStyle={styles.searchbarContainer}
                     inputContainerStyle={{ flexDirection: 'row-reverse', backgroundColor: 'white', justifyContent: 'space-around' }}
                 />
             </View>
@@ -77,5 +78,18 @@ const styles = StyleSheet.create({
     cardContainer: {
         alignItems: 'center',
         paddingTop: 20
+    },
+    greetText: {
+        fontSize: 36,
+        color: GlobalStyle.black,
+        fontWeight: 600,
+    },
+    contentContainer: {
+        paddingHorizontal: 10
+    },
+    searchbarContainer: {
+        backgroundColor: GlobalStyle.screenView.backgroundColor,
+        borderTopColor: 'transparent',
+        borderBottomColor: 'transparent'
     }
 })
